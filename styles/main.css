@@ -1,0 +1,262 @@
+@font-face {
+    font-family: "Crowd Funded";
+    src: url("fonts/crowdfunded_regular.ttf");
+}
+
+
+* {
+    font-family: "Crowd Funded";
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+}
+
+#bg {
+    background-color: rgb(71, 83, 109);
+    position: absolute;
+    /*left: -10px;*/
+    /*top: -10px;*/
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px) saturate(200%) brightness(0.8);
+    transition: ease;
+}
+
+#bgwparrer {
+    position: absolute;
+    height: 1080px;
+    width: 1920px;
+    -webkit-mask-image: url(maskbg.svg);
+    mask-image: url(maskbg.svg);
+}
+
+#hud {
+    position: absolute;
+    z-index: 1;
+}
+
+#bgDark {
+    position: absolute;
+    height: 1080px;
+    width: 1920px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#artist, #title {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    text-align: center; /* Выравниваем текст по центру */
+    padding: 10px; /* Отступы внутри рамки */
+    border: 2px solid black; /* Цвет и стиль рамки */
+    border-radius: 5px; /* Закругление углов рамки */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контраста */
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+}
+
+#artist {
+    font-size: 24px;
+    top: 940px;
+    left: 600px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: max-content;
+    overflow: hidden;
+}
+
+#title {
+    font-size: 40px;
+    top: 860px;
+    left: 600px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: max-content;
+    overflow: hidden;
+}
+
+#ar, #bpm, #starrate {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    text-align: left; /* Выравниваем текст по левому краю */
+    padding: 5px; /* Уменьшите отступы внутри рамки */
+    border: 1px solid black; /* Уменьшите толщину рамки */
+    border-radius: 3px; /* Уменьшите закругление углов */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контраста */
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: flex-start; /* Горизонтальное выравнивание по левому краю */
+}
+
+#ar {
+    font-size: 16px;
+    top: 1040px;
+    left: 200px; /* Устанавливаем левую границу */
+}
+
+#bpm {
+    font-size: 16px;
+    top: 1040px;
+    left: 300px; /* Устанавливаем левую границу с отступом */
+}
+
+#starrate {
+    font-size: 16px;
+    top: 1040px;
+    left: 400px; /* Устанавливаем левую границу с отступом */
+}
+
+/*#artist {*/
+/*    position: absolute;*/
+/*    color: rgba(255, 255, 255, 1);*/
+/*    z-index: 2;*/
+/*    font-weight: 100;*/
+/*    font-size: 24px;*/
+/*    top: 950px;*/
+/*    left: 600px; /* Устанавливаем левую границу в 50% */*/
+/*    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */*/
+/*    width: max-content;*/
+/*    overflow: hidden;*/
+/*    text-align: center; /* Выравниваем текст по центру */*/
+/*}*/
+/**/
+/*#title {*/
+/*    position: absolute;*/
+/*    color: rgba(255, 255, 255, 1);*/
+/*    z-index: 2;*/
+/*    font-weight: 100;*/
+/*    font-size: 40px;*/
+/*    top: 880px;*/
+/*    left: 600px; /* Устанавливаем левую границу в 50% */*/
+/*    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */*/
+/*    width: max-content;*/
+/*    overflow: hidden;*/
+/*    text-align: center; /* Выравниваем текст по центру */*/
+/*}*/
+
+#h100 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 985px;
+    left: 1038px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#h50 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 985px;
+    left: 1160px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#h0 {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 985px;
+    left: 1283px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#hSB {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 885px;
+    left: 1283px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#pp {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 885px;
+    left: 1038px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#ppMax {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    font-weight: 100;
+    font-size: 40px;
+    top: 885px;
+    left: 1160px; /* Устанавливаем левую границу в 50% */
+    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
+    width: 100px;
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    display: block; /* Можно использовать block или flex в зависимости от контекста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.test-style {
+  display: flex;
+  align-items: center;
+}
+
+.test-style>span:nth-child(2) {
+  /* font-size: 0.8em; */
+  color: #558cc8;
+  font-size: 96px;
+}

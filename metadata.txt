@@ -1,0 +1,8 @@
+Usecase: ingame, obs-overlay
+Name: kartav's overlay
+Version: 1.0
+Author: Kartav__ aka kartavkun
+CompatibleWith: gosu, tosu
+Resolution: 1920x1080
+authorLinks: https://github.com/kartavkun,https://twitter.com/kartav__,https://twitch.tv/kartav__
+Notes: Open-Source Implementation of [Siae's Luscent](https://twitter.com/mk_cou/status/1464208290158501894) overlay.\nNo elements were stolen. This is a remake.\nPlease [consider buying](https://gumroad.com/l/Luscent) her version!
