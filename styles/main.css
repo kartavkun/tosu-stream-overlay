@@ -59,35 +59,35 @@
     color: rgba(255, 255, 255, 1);
     z-index: 2;
     font-weight: 100;
-    text-align: center; /* Выравниваем текст по центру */
-    padding: 10px; /* Отступы внутри рамки */
-    border: 2px solid black; /* Цвет и стиль рамки */
-    border-radius: 5px; /* Закругление углов рамки */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контраста */
-    display: flex; /* Используем flexbox для выравнивания */
-    align-items: center; /* Вертикальное выравнивание по центру */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #artist {
     font-size: 24px;
     top: 940px;
-    left: 600px; /* Устанавливаем левую границу в 50% */
-    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
-    width: max-content;
+    left: 580px; /* Центрирование */
+    transform: translateX(-50%);
+    width: auto; /* Или установи фиксированную ширину */
     overflow: hidden;
 }
 
 #title {
-    font-size: 40px;
+    font-size: 32px;
     top: 860px;
-    left: 600px; /* Устанавливаем левую границу в 50% */
-    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
-    width: max-content;
+    left: 580px; /* Центрирование */
+    transform: translateX(-50%);
+    width: auto; /* Или установи фиксированную ширину */
     overflow: hidden;
 }
 
-#ar, #bpm, #starrate {
+#ar, #bpm, #starrate, #mods {
     position: absolute;
     color: rgba(255, 255, 255, 1);
     z-index: 2;
@@ -103,50 +103,28 @@
 }
 
 #ar {
-    font-size: 16px;
-    top: 1040px;
+    font-size: 24px;
+    top: 1035px;
     left: 200px; /* Устанавливаем левую границу */
 }
 
 #bpm {
-    font-size: 16px;
-    top: 1040px;
-    left: 300px; /* Устанавливаем левую границу с отступом */
+    font-size: 24px;
+    top: 1035px;
+    left: 285px; /* Устанавливаем левую границу с отступом */
 }
 
 #starrate {
-    font-size: 16px;
-    top: 1040px;
-    left: 400px; /* Устанавливаем левую границу с отступом */
+    font-size: 24px;
+    top: 1035px;
+    left: 380px; /* Устанавливаем левую границу с отступом */
 }
 
-/*#artist {*/
-/*    position: absolute;*/
-/*    color: rgba(255, 255, 255, 1);*/
-/*    z-index: 2;*/
-/*    font-weight: 100;*/
-/*    font-size: 24px;*/
-/*    top: 950px;*/
-/*    left: 600px; /* Устанавливаем левую границу в 50% */*/
-/*    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */*/
-/*    width: max-content;*/
-/*    overflow: hidden;*/
-/*    text-align: center; /* Выравниваем текст по центру */*/
-/*}*/
-/**/
-/*#title {*/
-/*    position: absolute;*/
-/*    color: rgba(255, 255, 255, 1);*/
-/*    z-index: 2;*/
-/*    font-weight: 100;*/
-/*    font-size: 40px;*/
-/*    top: 880px;*/
-/*    left: 600px; /* Устанавливаем левую границу в 50% */*/
-/*    transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */*/
-/*    width: max-content;*/
-/*    overflow: hidden;*/
-/*    text-align: center; /* Выравниваем текст по центру */*/
-/*}*/
+#mods {
+  font-size: 24px;
+  top: 1035px;
+  left: 445px;
+}
 
 #h100 {
     position: absolute;
@@ -243,9 +221,9 @@
     left: 1160px; /* Устанавливаем левую границу в 50% */
     transform: translateX(-50%); /* Сдвигаем элемент влево на половину его ширины */
     width: 100px;
-    overflow: hidden; /* Скрываем переполнение */
-    text-overflow: ellipsis; /* Добавляем многоточие для переполнения */
-    white-space: nowrap; /* Запрещаем перенос строк */
+    /*overflow: hidden; /* Скрываем переполнение */*/
+    /*text-overflow: ellipsis; /* Добавляем многоточие для переполнения */*/
+    /*white-space: nowrap; /* Запрещаем перенос строк */*/
     display: block; /* Можно использовать block или flex в зависимости от контекста */
     text-align: center; /* Выравниваем текст по центру */
 }

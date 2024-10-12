@@ -30,7 +30,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
+	overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
   .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
     display: block;
@@ -81,7 +85,6 @@
   }
   
   .odometer.odometer-auto-theme, .odometer.odometer-theme-default {
-    font-family: "Helvetica Neue", sans-serif;
     line-height: 1.1em;
   }
   .odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {

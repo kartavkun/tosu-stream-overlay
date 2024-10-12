@@ -31,8 +31,6 @@ const h0 = new CountUp('h0', 0, 0, 0, .5, { useEasing: true, useGrouping: true, 
 const hSB = new CountUp('hSB', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
 
 
-
-
 // receive message update from websocket
 socket.api_v2(({ play, folders, beatmap, directPath, performance, state, resultsScreen }) => {
   try {
@@ -142,9 +140,10 @@ socket.api_v2(({ play, folders, beatmap, directPath, performance, state, results
       //document.getElementById('starrate').innerHTML = beatmap.stats.stars.total;
     }
 
-    //if (mods) {
-    //
-    //}
+    if (cache.mods !== play.mods.name) {
+      cache.mods = play.mods.name;
+      document.getElementById('mods').innerHTML = `Mods: ${cache.mods}`
+    }
 
   } catch (error) {
     console.log(error);
